@@ -1,0 +1,180 @@
+/* You can add global styles to this file, and also import other style files */
+/*body{
+background: #8E0E00;  /* fallback for old browsers 
+background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 
+background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+
+}*//*
+.titulo {
+    font-size:  1.8rem;
+    font-family: 'Open Sans', sans-serif;
+}*/
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+ 
+ 
+a {
+  cursor: pointer;
+}
+ 
+.mat-dialog-container {
+  border-radius: 10px !important;
+}
+.modal--perfil {
+  display: none;
+  z-index: 200;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: 30%;
+  margin-right: 30%;
+  top: 30%;
+  padding: 24px 24px 24px 24px;
+  box-sizing: border-box;
+} 
+div.mat-expansion-panel-body {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+  .link {
+    color: #8E0E00;
+    font-size: 14px; 
+  }
+  .text { 
+      text-align: center; 
+  } else
+
+  button {
+    border-radius: 40px !important;
+  }
+  .mat-line-white {
+    border-color: white !important;
+    color: white;
+  }
+  
+.container {
+    font-family: "Open Sans", sans-serif;
+    background: linear-gradient(
+      270deg,
+      rgba(75, 62, 255, 0.05),
+      rgba(63, 3, 177, 0.05)
+    );
+    background-size: 100% 100%;
+    overflow: auto;
+    height: 100vh;
+  
+  }
+
+  
+.alert {
+    z-index: 3;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    align-items: center;
+    min-width: 457px;
+    max-width: 500px;
+    padding: 17px 18px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 25px;
+    margin: auto;
+    @media (max-width: 993px) {
+      margin: auto;
+    }
+    @media (max-width: 380px) {
+      min-width: 320px;
+      max-width: 340px;
+      margin: 0;
+    }
+   
+    
+  }
+  
+  .message {
+    font-family: "Open Sans", sans-serif;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    max-width: 523px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+   
+  }
+
+  
+.g-box {
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+    background: white;
+    border-radius: 10px;
+    justify-content: center;
+ 
+}
+  
+
+.form {
+    text-align: center; 
+     
+    }  
+    .mat-form-field {
+        width: 100%;
+      }
+
+      .mat-input-element {
+        color: gray !important;
+        font-weight: normal !important;
+      }
+
+      .box--big__title{
+        color: #9c27b0;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 54.47px;
+        text-align: center;
+        margin-top: 39px;
+        margin-bottom: 5px;
+      }
+      .box--big__subtitle{
+        color: #727272;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        max-width: 524px;
+        margin: 0 auto;
+      }
+
+      .box--big{
+        position: relative;
+        top: 80px;
+        max-width: 722px;
+        margin: 0 auto 80px;
+        text-align: center;
+        padding: 0 0 60px;
+    
+      }
+      .form__item{
+         display: flex; 
+    align-items: center;  
+    max-width: 342px;
+    justify-content: space-between;
+    margin: 0 auto;
+      }
+      .form {
+        text-align: center;
+      }
+      
+      .card{
+        color: #9c27b0;    
+      }
+
+      .example-button-container {
+        display: flex;
+        justify-content: center;
+        width: 120px;
+      }
+      .mat-card-actions{
+        text-align: center !important;
+      }

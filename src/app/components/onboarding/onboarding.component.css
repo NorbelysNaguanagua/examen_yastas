@@ -1,0 +1,10 @@
+img-wrapper {
+    align-items: center;
+    border-radius: 50%;
+    border: 6px solid #674ce0;
+    display: flex;
+    height: 128px;
+    justify-content: center;
+    width: 128px;
+    margin: 45px auto;
+  }

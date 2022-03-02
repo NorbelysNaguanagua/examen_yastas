@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-body text-center">
+          <span class="titulo">Detalle platillo </span> 
+          <button mat-raised-button color="primary" routerLink="/welcome">Volver</button>  
+          <table *ngIf="id.length > 0"class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th scope="col">Platillo</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Ubicación</th>
+                <th scope="col">Precio</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>          
+                <th scope="col">{{strMeal}}</th>
+                <th scope="col">{{strCategory}} {{strTags}}</th>
+                <th scope="col">{{strArea}}  </th>
+                <th scope="col">{{526.58 | currency : 'USD'}}</th>               
+                <td>      
+                  <i class="fas fa-edit text-primary"></i>
+                  <i class="fas fa-trash text-danger"  ></i>
+              </td>             
+            </tbody>
+          </table>
+
+          <mat-card
+          >
+          <mat-card-content>            
+            <img class="img"  *ngIf="strMealThumb" [src]="strMealThumb" alt="" class="img-wrapper">
+          </mat-card-content>
+          </mat-card>
+          <mat-card>Instrucciones: {{strInstructions}}</mat-card>
+          <mat-card>Medidas: {{strInstructions}}</mat-card>
+          <mat-card>Ver preparación
+          <p>
+            <iframe width="560" height="315" [src]="getVideoIframe(strYoutube)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p> 
+       
+        </mat-card> 
+        <h5 style="text-align: center; margin: top 10px;" *ngIf="id.length==0">No hay Platillo para mostrar</h5>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

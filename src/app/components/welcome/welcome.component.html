@@ -1,0 +1,16 @@
+
+<mat-card>
+    <mat-card-title>!Bienvenido!	Platos Criollos
+    </mat-card-title>
+    <mat-card-content>
+        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/welcome">Bienvenido</button>
+          <button mat-menu-item  routerLink="/platillo">Platillos</button>
+          <button mat-menu-item  routerLink="/ingredientes">Ingredientes</button>
+          <button mat-menu-item  routerLink="/perfil">Perfil</button>
+          <button mat-menu-item (click)="logout();" >Cerrar Sesion</button>
+        </mat-menu>
+    </mat-card-content>
+
+</mat-card>

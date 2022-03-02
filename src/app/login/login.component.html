@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="g-box box--big">
+   
+        <h1 class="box--big__title">
+            ¡Bienvenido nuevamente!        
+          </h1> 
+          <h5 class="box--big__subtitle" >
+            A la plataforma donde puedes comprar y vender criptos a otro nivel, te apoyamos en los comercios más grandes y con
+            la inmediatez que necesita tu negocio cripto.
+          </h5>
+ 
+  
+
+    <div class="aligner">
+
+        <mat-card class="card">
+          <mat-card-title>
+            Login 
+          </mat-card-title>
+          <form class="form" [formGroup]="form" (ngSubmit)="login()"> 
+          <mat-card-content> 
+                <input matInput type="text" formControlName="username" class="form-control" placeholder="Usuario"/>
+                <mat-error *ngIf="hasError('username')">
+                    <span *ngIf="username?.errors?.['username']" class="error" [ngClass]="{'pass--error': username?.errors?.['username']}">Ingresa un usuario valido.</span>
+                  </mat-error>              
+                <input matInput type="password" formControlName="password"  class="form-control"  placeholder="Password"/> 
+           
+          </mat-card-content>
+ 
+          <section class="example-section">
+            <mat-checkbox class="example-margin" color="primary" >Recordar usuario</mat-checkbox> 
+          </section>
+          <mat-card-actions style="text-align: right;">
+            <button mat-raised-button color="primary" [disabled]="form.invalid">Ingresar</button>  
+          </mat-card-actions>
+          </form>
+        </mat-card>
+      </div> 
+   
+    
+    </div> 
+   
+  </div>

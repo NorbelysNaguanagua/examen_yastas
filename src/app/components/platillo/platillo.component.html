@@ -1,0 +1,51 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="card">
+          <mat-card class="card-body text-center">
+            <h4>Seleccione el ingrediente</h4>
+              <mat-form-field appearance="fill">
+                <mat-label>  Ingrediente favorito</mat-label>
+                <mat-select (selectionChange)="getIngredientesPlatillo($event.value)">
+                  <mat-option *ngFor="let food of foods" [value]="food.value">
+                    {{food.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            <span *ngIf="name" class="titulo">Platillos que contienen {{name}}!    </span>
+            <span  *ngIf="!name"  class="titulo">Platillos Aleatorios !   </span>
+            <button mat-raised-button color="primary" routerLink="/welcome">
+              Ir al inicio
+            </button>
+            <mat-card *ngIf="name" >
+              <mat-card-content>
+                <mat-accordion>
+                  <mat-expansion-panel
+                    hideToggle  *ngFor="let ingrediente of ListIngredientPlatillo; let i = index"
+                  >
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        # {{ ingrediente.strMeal }}
+                      </mat-panel-title>
+                      <mat-panel-description>
+                        <img class="img"  *ngIf="ingrediente.strMealThumb " [src]="ingrediente.strMealThumb " alt="" class="img-wrapper">                       
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p> </p>
+                    <button mat-button color="accent" (click)="ver_detalle(ingrediente.idMeal)" >Ver detalle del plato</button>
+                  </mat-expansion-panel>
+                  <mat-expansion-panel
+                    
+                  >
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </mat-card-content>
+            </mat-card>
+            
+ 
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  

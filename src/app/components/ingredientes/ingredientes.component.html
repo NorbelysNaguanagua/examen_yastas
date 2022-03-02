@@ -1,0 +1,40 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <div class="card">
+        <div class="card-body text-center">
+          <span class="titulo">Ingredientes Populares! </span>
+          <button mat-raised-button color="primary" routerLink="/welcome">
+            Volver
+          </button>
+          <mat-card>
+            <mat-card-content>
+              <mat-accordion>
+                <mat-expansion-panel
+                  hideToggle
+                  *ngFor="let ingrediente of ListIngredient; let i = index"
+                >
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      # {{ ingrediente.idIngredient }}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      {{ ingrediente.strIngredient }}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>{{ ingrediente.strDescription.substring(0, 100) }}</p>
+                  <button mat-button color="accent" (click)="ver_platillo(ingrediente.strIngredient)">Ver platillos</button>
+                </mat-expansion-panel>
+                <mat-expansion-panel
+                  (opened)="panelOpenState = true"
+                  (closed)="panelOpenState = false"
+                >
+                </mat-expansion-panel>
+              </mat-accordion>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
